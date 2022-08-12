@@ -33,6 +33,7 @@ h4 {
     justify-content: space-between;
     height: 8rem;
     width: 100vw;
+    /* width: fit-content; */
     background-color: rgb(204, 206, 209);
     padding: 0rem 3%;
     border: 5px solid;
@@ -107,7 +108,9 @@ main {
     /* scroll-margin-top: 6rem; */
     /* position: relative; */
     width: 100vw;
-    height: 150rem;
+    /* width: fit-content; */
+    /* height: 150rem; */
+    height: fit-content;
     background-image: url("images/background/bg-007.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -172,8 +175,9 @@ main {
 #favourites {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
-    height: 36rem;
+    /* width: 100vw; */
+    width: 100%;
+    min-height: 36rem;
     /* margin-top: 4rem; */
     align-items: center;
     gap: 2rem;
@@ -222,20 +226,30 @@ main {
 /* main 3-rd section */
 #pizzeriaIntroduction {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* nacist obrazek nastavit width % a min width rem */
-    justify-content: space-between;
     width: 100%;
     /* width: 100vw; */
-    height: 24rem;
+    min-height: 26rem;
     gap: 2rem;
     padding: 4rem;
+    border: 4px solid gray;
+}
+
+#pizzeriaIntroduction img {
+    width: 30%;
+    min-width: 22rem;
+    border: 3px solid red;
 }
 
 #pizzeriaInfo {
-    margin-right: 10%;
+    /* margin-right: 10%; */
+    width: 50%;
+    /* width: fit-content; */
+    max-height: 26rem;
     padding: 2rem;
     background-color: black;
+    border: 4px solid cyan;
 
 }
 
@@ -249,7 +263,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 24rem;
+    min-height: 26rem;
     gap: 2rem;
     padding: 4rem;
     border: 4px solid gray;
@@ -257,6 +271,9 @@ main {
 
 #pizzeriaLocationInfo {
     text-align: center;
+    line-height: 4rem;
+    /* set text center horizontaly*/
+    /* align-items: center; */
     /* margin-right: 10%; */
     padding: 2rem;
     background-color: black;
@@ -266,4 +283,32 @@ main {
     width: 30%;
     min-width: 18rem;
     border: 3px solid red;
+}
+
+
+@media (max-width: 700px) {
+
+    #pizzeriaIntroduction {
+        display: flex;
+        flex-wrap: wrap;
+        /* nacist obrazek nastavit width % a min width rem */
+        width: 100%;
+        /* width: 100vw; */
+        /* min-height: 64rem; */
+        gap: 2rem;
+        padding: 4rem;
+        border: 4px solid gray;
+    }
+
+    #pizzeriaInfo {
+        /* margin-right: 10%; */
+        /* width: fit-content; */
+        /* max-height: 26rem; */
+        width: 100%;
+        min-height: 32rem;
+        padding: 2rem;
+        background-color: black;
+        border: 4px solid cyan;
+
+    }
 }
