@@ -172,13 +172,11 @@ main {
 
 
 /* main 2-nd section */
-#favourites {
+/* #favourites {
     display: flex;
     flex-wrap: wrap;
-    /* width: 100vw; */
     width: 100%;
     min-height: 36rem;
-    /* margin-top: 4rem; */
     align-items: center;
     gap: 2rem;
     padding: 4rem;
@@ -194,8 +192,7 @@ main {
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 60%;
-    height: 100%;
-    /* padding: 1rem; */
+    min-height: 100%;
     gap: 2rem;
     border: 4px solid red;
 }
@@ -219,7 +216,78 @@ main {
     font-size: 2rem;
     left: 5%;
     bottom: 5%;
-    /* z-index: 1; */
+} */
+
+#favourites {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    grid-template-rows: repeat(2, minmax(20px, auto));
+    gap: 2rem;
+    min-width: 100%;
+    place-items: center;
+    padding: 4rem;
+    border: 3px solid rgb(237, 110, 25);
+}
+
+@media (max-width: 700px) {
+    #favourites {
+        grid-auto-flow: column;
+    }
+}
+
+#favouriteText {
+    place-self: center;
+}
+
+#favourites h2 {
+    font-size: 3rem;
+    transform: rotateZ(70deg);
+    border: 4px solid purple;
+}
+
+@media (max-width: 700px) {
+    #favourites h2 {
+        transform: rotateZ(10deg);
+        margin-left: 120px;
+    }
+}
+
+#favouriteOffers {
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    min-width: 400px;
+    /* min-height: 100%; */
+    border: 4px solid red;
+}
+
+@media (max-width: 700px) {
+    #favouriteOffers {
+        grid-column: span 4;
+    }
+}
+
+#favouriteOffers>* {
+    position: relative;
+    border: 3px solid yellow;
+}
+
+#favouriteOffers img {
+
+    width: 100%;
+    height: 100%;
+    border: 3px solid green;
+}
+
+#favouriteOffers h4 {
+    position: absolute;
+    max-width: 100%;
+    max-height: 20%;
+    font-size: 1.2rem;
+    left: 5%;
+    bottom: 5%;
+    border: 3px solid blue;
 }
 
 
@@ -227,9 +295,7 @@ main {
 #pizzeriaIntroduction {
     display: flex;
     flex-wrap: wrap;
-    /* nacist obrazek nastavit width % a min width rem */
-    width: 100%;
-    /* width: 100vw; */
+    min-width: 100%;
     min-height: 26rem;
     gap: 2rem;
     padding: 4rem;
@@ -238,19 +304,18 @@ main {
 
 #pizzeriaIntroduction img {
     width: 30%;
-    min-width: 22rem;
+    min-width: 18rem;
     border: 3px solid red;
 }
 
+
 #pizzeriaInfo {
-    /* margin-right: 10%; */
-    width: 50%;
-    /* width: fit-content; */
-    max-height: 26rem;
+    flex-grow: 1;
+    width: 60%;
+    height: auto;
     padding: 2rem;
     background-color: black;
     border: 4px solid cyan;
-
 }
 
 #pizzeriaInfo p {
@@ -263,7 +328,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    min-height: 26rem;
     gap: 2rem;
     padding: 4rem;
     border: 4px solid gray;
@@ -272,9 +336,6 @@ main {
 #pizzeriaLocationInfo {
     text-align: center;
     line-height: 4rem;
-    /* set text center horizontaly*/
-    /* align-items: center; */
-    /* margin-right: 10%; */
     padding: 2rem;
     background-color: black;
 }
@@ -283,32 +344,4 @@ main {
     width: 30%;
     min-width: 18rem;
     border: 3px solid red;
-}
-
-
-@media (max-width: 700px) {
-
-    #pizzeriaIntroduction {
-        display: flex;
-        flex-wrap: wrap;
-        /* nacist obrazek nastavit width % a min width rem */
-        width: 100%;
-        /* width: 100vw; */
-        /* min-height: 64rem; */
-        gap: 2rem;
-        padding: 4rem;
-        border: 4px solid gray;
-    }
-
-    #pizzeriaInfo {
-        /* margin-right: 10%; */
-        /* width: fit-content; */
-        /* max-height: 26rem; */
-        width: 100%;
-        min-height: 32rem;
-        padding: 2rem;
-        background-color: black;
-        border: 4px solid cyan;
-
-    }
 }
