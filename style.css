@@ -5,6 +5,10 @@
     font-family: sans-serif, 'Times New Roman', Times;
 }
 
+body {
+    min-width: 400px;
+}
+
 h2 {
     font-family: 'Rubik Dirt', cursive;
     font-size: 4rem;
@@ -23,7 +27,8 @@ h4 {
 }
 
 
-/* Navigation bar */
+
+/* ---------------------Navigation bar------------------- */
 #header {
     position: fixed;
     top: 0;
@@ -32,8 +37,8 @@ h4 {
     align-items: center;
     justify-content: space-between;
     height: 8rem;
-    width: 100vw;
-    /* width: fit-content; */
+    /* width: 100vw; */
+    width: 100%;
     background-color: rgb(204, 206, 209);
     padding: 0rem 3%;
     border: 5px solid;
@@ -92,64 +97,81 @@ h4 {
 
 #headerTelNumber {
     min-width: fit-content;
-    margin-right: 10%;
 }
+
+@media (max-width: 550px) {
+    #headerTelNumber {
+        margin-top: 5%;
+        margin-right: 80%;
+    }
+}
+
+#headerTelNumber h4 {
+    font-size: 1rem;
+}
+
+@media (max-width: 550px) {
+    #headerTelNumber h4 {
+        font-size: 0.8rem;
+        transform: rotate(70deg);
+    }
+}
+
 
 /* to push down main content due to header - fixed */
 #navBarFiller {
-    width: 100vh;
+    width: 100%;
     height: 8rem;
 }
 
 
-/* main content */
+/* ------------------------main content---------------------- */
+
+/* ------------main 1-st section------------- */
 main {
-    /* margin-top: 10vh; */
-    /* scroll-margin-top: 6rem; */
-    /* position: relative; */
-    width: 100vw;
-    /* width: fit-content; */
-    /* height: 150rem; */
-    height: fit-content;
     background-image: url("images/background/bg-007.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    /* border: 8px solid; */
     color: rgb(226, 226, 226);
-    padding: 2rem;
     border: 5px solid orange;
-    /* top: 20%;
-    display: flex;
-    width: auto;
-    height: 250vh;
-    opacity: 50%;
-    background-position: center;
-    background-size: cover; */
+}
+
+#container-main-offer {
+    padding: 5%;
+    border: 10px solid red;
 }
 
 
-/* main 1-st section */
+#main-offer-deal {
+    float: left;
+    width: fit-content;
+    margin-right: 4rem;
+    padding: 1rem;
+    transform: rotate(20deg);
+    border: 3px solid greenyellow;
+}
+
+@media (max-width: 700px) {
+    #main-offer-deal {
+        font-size: 3rem;
+        width: 95%;
+    }
+}
+
 #smallImg1 {
-    position: relative;
-    bottom: 6rem;
     float: right;
-    /* dodelat float by mel byt u obrazku a ne cele sekce*/
-    width: 20%;
-    min-width: 15rem;
-    height: 20%;
-    /* margin-top: 8rem; */
+    margin: 2rem;
     margin-right: 10%;
-    margin-left: 3rem;
-    margin-bottom: 2rem;
+    max-width: 25%;
+    min-width: 15rem;
     border: 3px solid white;
     transform: rotateZ(-20deg);
 }
 
 #smallImg1 img {
     width: 100%;
-    height: 15rem;
 }
 
 #smallImg1 h3 {
@@ -159,65 +181,20 @@ main {
     text-shadow: 3px 3px 2px black;
 }
 
-#mainOffer {
-    margin-top: 17%;
-    margin-left: 12%;
-    transform: rotate(20deg);
-}
-
 #mainOfferDescription {
-    margin-left: 8%;
-    /* margin-bottom: 2rem; */
+    width: max-content;
+    border: 3px solid greenyellow;
+}
+
+@media (max-width: 700px) {
+    #mainOfferDescription {
+        font-size: 2rem;
+        width: 95%;
+    }
 }
 
 
-/* main 2-nd section */
-/* #favourites {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    min-height: 36rem;
-    align-items: center;
-    gap: 2rem;
-    padding: 4rem;
-    border: 3px solid rgb(89, 71, 71);
-}
-
-#favourites h2 {
-    transform: rotateZ(20deg);
-}
-
-#favouriteOffers {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 60%;
-    min-height: 100%;
-    gap: 2rem;
-    border: 4px solid red;
-}
-
-#favouriteOffers>* {
-    position: relative;
-    width: 34%;
-    height: 40%;
-    border: 3px solid yellow;
-}
-
-#favouriteOffers img {
-
-    width: 100%;
-    height: 100%;
-    border: 3px solid green;
-}
-
-#favouriteOffers h4 {
-    position: absolute;
-    font-size: 2rem;
-    left: 5%;
-    bottom: 5%;
-} */
-
+/* --------------main 2-nd section-------------- */
 #favourites {
     display: grid;
     grid-template-columns: repeat(4, minmax(50px, 1fr));
@@ -225,7 +202,8 @@ main {
     gap: 2rem;
     min-width: 100%;
     place-items: center;
-    padding: 4rem;
+    padding: 1rem;
+    margin-top: 2rem;
     border: 3px solid rgb(237, 110, 25);
 }
 
@@ -239,6 +217,13 @@ main {
     place-self: center;
 }
 
+@media (max-width: 700px) {
+    #favouriteText {
+        grid-column: span 2;
+        justify-self: left;
+    }
+}
+
 #favourites h2 {
     font-size: 3rem;
     transform: rotateZ(70deg);
@@ -247,17 +232,20 @@ main {
 
 @media (max-width: 700px) {
     #favourites h2 {
+        font-size: 2.4rem;
         transform: rotateZ(10deg);
-        margin-left: 120px;
+        /* margin-left: 120px; */
     }
 }
 
 #favouriteOffers {
+    justify-self: left;
     display: grid;
     grid-column: span 3;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    min-width: 400px;
+    gap: 1rem;
+    min-width: 360px;
+    max-width: 70%;
     /* min-height: 100%; */
     border: 4px solid red;
 }
@@ -291,14 +279,14 @@ main {
 }
 
 
-/* main 3-rd section */
+/* ------------------main 3-rd section---------------- */
 #pizzeriaIntroduction {
     display: flex;
     flex-wrap: wrap;
     min-width: 100%;
     min-height: 26rem;
     gap: 2rem;
-    padding: 4rem;
+    padding: 2rem;
     border: 4px solid gray;
 }
 
@@ -323,13 +311,13 @@ main {
 }
 
 
-/* main 4-th section */
+/* -----------------main 4-th section-------------- */
 #pizzeriaLocation {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     gap: 2rem;
-    padding: 4rem;
+    padding: 2rem;
     border: 4px solid gray;
 }
 
