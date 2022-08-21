@@ -11,3 +11,23 @@ testButtton.addEventListener("click", () => {
     }
 });
 
+
+
+// HTML for headers
+const header = document.querySelector('.header')
+fetch('/html/header.html')
+    .then(content => content.text())
+    .then(data => {
+        header.innerHTML = data
+    });
+
+
+
+// HTML for footers
+const footer = document.querySelector('.footer-container')
+fetch('/html/footer.html')
+    .then(content => content.text())
+    .then(data => {
+        footer.innerHTML = data
+    });
+

@@ -1,0 +1,239 @@
+@import 'header.css';
+@import 'footer.css';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'Times New Roman', Times;
+}
+
+body {
+    min-width: 400px;
+}
+
+h2 {
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 4rem;
+    color: white;
+}
+
+h3 {
+    font-family: 'Inspiration', cursive;
+    font-size: 4rem;
+    text-shadow: 3px 3px 2px black;
+}
+
+
+/* ------------------------main content---------------------- */
+
+/* ------------main 1-st section------------- */
+main {
+    background-image: url("/images/background/bg-007.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(226, 226, 226);
+    border: 5px solid orange;
+}
+
+#container-main-offer {
+    padding: 5%;
+    border: 10px solid red;
+}
+
+
+#main-offer-deal {
+    float: left;
+    width: fit-content;
+    margin-right: 4rem;
+    padding: 1rem;
+    transform: rotate(20deg);
+    border: 3px solid greenyellow;
+}
+
+@media (max-width: 700px) {
+    #main-offer-deal {
+        font-size: 3rem;
+        width: 95%;
+    }
+}
+
+#smallImg1 {
+    float: right;
+    margin: 2rem;
+    margin-right: 10%;
+    max-width: 25%;
+    min-width: 15rem;
+    border: 3px solid white;
+    transform: rotateZ(-20deg);
+}
+
+#smallImg1 img {
+    width: 100%;
+}
+
+#smallImg1 h3 {
+    font-family: 'Inspiration', cursive;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 3px 3px 2px black;
+}
+
+#mainOfferDescription {
+    width: max-content;
+    border: 3px solid greenyellow;
+}
+
+@media (max-width: 700px) {
+    #mainOfferDescription {
+        font-size: 2rem;
+        width: 95%;
+    }
+}
+
+
+/* --------------main 2-nd section-------------- */
+#favourites {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    grid-template-rows: repeat(2, minmax(20px, auto));
+    gap: 2rem;
+    min-width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    border: 3px solid rgb(237, 110, 25);
+}
+
+@media (max-width: 700px) {
+    #favourites {
+        grid-auto-flow: column;
+    }
+}
+
+#favouriteText {
+    place-self: center;
+}
+
+@media (max-width: 700px) {
+    #favouriteText {
+        grid-column: span 2;
+        justify-self: left;
+    }
+}
+
+#favourites h2 {
+    font-size: 3rem;
+    transform: rotateZ(70deg);
+    border: 4px solid purple;
+}
+
+@media (max-width: 700px) {
+    #favourites h2 {
+        font-size: 2.4rem;
+        transform: rotateZ(10deg);
+    }
+}
+
+#favouriteOffers {
+    justify-self: left;
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    min-width: 360px;
+    max-width: 70%;
+    border: 4px solid red;
+}
+
+@media (max-width: 700px) {
+    #favouriteOffers {
+        justify-self: center;
+        grid-column: span 4;
+    }
+}
+
+#favouriteOffers>* {
+    position: relative;
+    border: 3px solid yellow;
+}
+
+#favouriteOffers img {
+
+    width: 100%;
+    height: 100%;
+    border: 3px solid green;
+}
+
+#favouriteOffers h4 {
+    position: absolute;
+    max-width: 100%;
+    max-height: 20%;
+    font-size: 1.2rem;
+    left: 5%;
+    bottom: 5%;
+    border: 3px solid blue;
+}
+
+
+/* ------------------main 3-rd section---------------- */
+#pizzeriaIntroduction {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 26rem;
+    gap: 2rem;
+    padding: 2rem 5%;
+    border: 4px solid gray;
+}
+
+#pizzeriaIntroduction img {
+    order: 1;
+    max-width: 450px;
+    max-height: 350px;
+    min-width: 360px;
+    border: 3px solid red;
+}
+
+
+#pizzeriaInfo {
+    flex-grow: 1;
+    width: 50%;
+    height: auto;
+    padding: 2rem;
+    background-color: black;
+    border: 4px solid cyan;
+}
+
+#pizzeriaInfo p {
+    margin-top: 1.5rem;
+}
+
+
+/* -----------------main 4-th section-------------- */
+#pizzeriaLocation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
+    border: 4px solid gray;
+}
+
+#pizzeriaLocationInfo {
+    text-align: center;
+    line-height: 4rem;
+    padding: 2rem;
+    background-color: black;
+}
+
+#pizzeriaLocation img {
+    max-width: 450px;
+    max-height: 350px;
+    min-width: 360px;
+    border: 3px solid red;
+}

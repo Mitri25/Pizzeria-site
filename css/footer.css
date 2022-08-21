@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'Times New Roman', Times;
+}
+
+body {
+    min-width: 400px;
+}
+
+h4 {
+    font-family: 'Gill Sans';
+    font-size: 2rem;
+}
+
+/* -----------------footer-------------- */
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem;
+    height: auto;
+    background: linear-gradient(lightgray, black);
+}
+
+#footer-nav {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
+
+#footer-nav li {
+    list-style: none;
+}
+
+#footer-nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer-nav li:hover {
+    text-shadow: 0px 0px 6px orangered;
+}
+
+
+#open-hours table {
+    border-collapse: collapse;
+    border: 4px solid black;
+}
+
+#open-hours th {
+    padding: 2px 1rem;
+    background: linear-gradient(to left, lightgray, orangered);
+    border: 2px solid black;
+}
+
+#open-hours td {
+    padding: 2px;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+
+#payment-info {
+    padding: 3rem;
+}
+
+#payment-text h4 {
+    font-size: 1.5rem;
+}
+
+#payment-icons {
+    scale: 2.5;
+    color: orangered;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    text-shadow: 0px 0px 6px gold;
+}
