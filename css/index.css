@@ -1,43 +1,28 @@
 @import 'header.css';
 @import 'footer.css';
 
+/* --------------header.css includes basic element styles------------------ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif, 'Times New Roman', Times;
-}
 
-body {
-    min-width: 400px;
-}
-
-h2 {
-    font-family: 'Rubik Dirt', cursive;
-    font-size: 4rem;
-    color: white;
-}
-
-h3 {
-    font-family: 'Inspiration', cursive;
-    font-size: 4rem;
-    text-shadow: 3px 3px 2px black;
+:root {
+    --text-color: hsl(0, 0%, 86%);
 }
 
 
 /* ------------------------main content---------------------- */
 
-/* ------------main 1-st section------------- */
 main {
     background-image: url("/images/background/bg-007.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    color: rgb(226, 226, 226);
+    color: var(--text-color);
     border: 5px solid orange;
 }
+
+
+/* ------------main 1-st section------------- */
 
 #container-main-offer {
     padding: 5%;
@@ -82,13 +67,13 @@ main {
     text-shadow: 3px 3px 2px black;
 }
 
-#mainOfferDescription {
+#main-offer-description {
     width: max-content;
     border: 3px solid greenyellow;
 }
 
 @media (max-width: 700px) {
-    #mainOfferDescription {
+    #main-offer-description {
         font-size: 2rem;
         width: 95%;
     }
@@ -113,12 +98,12 @@ main {
     }
 }
 
-#favouriteText {
+#favourite-text {
     place-self: center;
 }
 
 @media (max-width: 700px) {
-    #favouriteText {
+    #favourite-text {
         grid-column: span 2;
         justify-self: left;
     }
@@ -137,7 +122,7 @@ main {
     }
 }
 
-#favouriteOffers {
+#favourite-offers {
     justify-self: left;
     display: grid;
     grid-column: span 3;
@@ -149,25 +134,25 @@ main {
 }
 
 @media (max-width: 700px) {
-    #favouriteOffers {
+    #favourite-offers {
         justify-self: center;
         grid-column: span 4;
     }
 }
 
-#favouriteOffers>* {
+#favourite-offers>* {
     position: relative;
     border: 3px solid yellow;
 }
 
-#favouriteOffers img {
+#favourite-offers img {
 
     width: 100%;
     height: 100%;
     border: 3px solid green;
 }
 
-#favouriteOffers h4 {
+#favourite-offers h4 {
     position: absolute;
     max-width: 100%;
     max-height: 20%;
@@ -179,7 +164,7 @@ main {
 
 
 /* ------------------main 3-rd section---------------- */
-#pizzeriaIntroduction {
+#pizzeria-introduction {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -190,7 +175,7 @@ main {
     border: 4px solid gray;
 }
 
-#pizzeriaIntroduction img {
+#pizzeria-introduction img {
     order: 1;
     max-width: 450px;
     max-height: 350px;
@@ -199,7 +184,7 @@ main {
 }
 
 
-#pizzeriaInfo {
+#pizzeria-info {
     flex-grow: 1;
     width: 50%;
     height: auto;
@@ -208,13 +193,13 @@ main {
     border: 4px solid cyan;
 }
 
-#pizzeriaInfo p {
+#pizzeria-info p {
     margin-top: 1.5rem;
 }
 
 
 /* -----------------main 4-th section-------------- */
-#pizzeriaLocation {
+#pizzeria-location {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -224,14 +209,14 @@ main {
     border: 4px solid gray;
 }
 
-#pizzeriaLocationInfo {
+#pizzeria-location-info {
     text-align: center;
     line-height: 4rem;
     padding: 2rem;
     background-color: black;
 }
 
-#pizzeriaLocation img {
+#pizzeria-location img {
     max-width: 450px;
     max-height: 350px;
     min-width: 360px;

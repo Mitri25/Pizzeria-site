@@ -1,17 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif, 'Times New Roman', Times;
-}
+/* --------------header.css includes basic element styles------------------ */
 
-body {
-    min-width: 400px;
-}
-
-h4 {
-    font-family: 'Gill Sans';
-    font-size: 2rem;
+:root {
+    --footer-color-style: orangered;
 }
 
 /* -----------------footer-------------- */
@@ -40,7 +30,7 @@ h4 {
 }
 
 #footer-nav li:hover {
-    text-shadow: 0px 0px 6px orangered;
+    text-shadow: 0px 0px 6px var(--footer-color-style);
 }
 
 
@@ -51,7 +41,7 @@ h4 {
 
 #open-hours th {
     padding: 2px 1rem;
-    background: linear-gradient(to left, lightgray, orangered);
+    background: linear-gradient(to left, lightgray, var(--footer-color-style));
     border: 2px solid black;
 }
 
@@ -72,7 +62,7 @@ h4 {
 
 #payment-icons {
     scale: 2.5;
-    color: orangered;
+    color: var(--footer-color-style);
     margin-top: 2rem;
     margin-left: 6rem;
     text-shadow: 0px 0px 6px gold;

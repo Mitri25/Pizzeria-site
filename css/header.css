@@ -1,3 +1,5 @@
+/* ----------basic element styles---------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,17 @@
 
 body {
     min-width: 400px;
+}
+
+h2 {
+    font-family: 'Rubik Dirt', cursive;
+    font-size: 4rem;
+}
+
+h3 {
+    font-family: 'Inspiration', cursive;
+    font-size: 4rem;
+    text-shadow: 3px 3px 2px black;
 }
 
 h4 {
@@ -23,7 +36,7 @@ h4 {
 
 
 /* ---------------------Navigation bar------------------- */
-.header nav {
+.header-container nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -37,34 +50,33 @@ h4 {
     z-index: 1;
 }
 
-#PizzeriaText {
+#Pizzeria-text {
     text-decoration: none;
 }
 
-#PizzeriaText h1 {
+#Pizzeria-text h1 {
     text-decoration: none;
     font-family: 'Alumni Sans Inline One', cursive;
     color: black;
     font-size: 3.5rem;
     font-weight: 300;
-    text-shadow: 1px -1px 3px rgb(255, 89, 0);
+    text-shadow: 1px -1px 3px orangered;
 }
 
-#PizzeriaText h1:hover {
-    text-shadow: 1px -1px 3px rgb(255, 0, 0);
-    text-shadow: 1px -1px 6px rgb(255, 0, 0);
+#Pizzeria-text h1:hover {
+    text-shadow: 1px -1px 3px red;
+    text-shadow: 1px -1px 6px red;
     transition: 0.6s;
 }
 
-#navBar {
+#nav-bar {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    color: brown;
 }
 
-#navBar li {
+#nav-bar li {
     display: flex;
     width: 5rem;
     height: 2rem;
@@ -72,45 +84,45 @@ h4 {
     margin: 0.5rem 2.5rem;
 }
 
-#navBar li a {
+#nav-bar li a {
     text-decoration: none;
     font-family: 'Gill Sans';
     font-size: 1.5rem;
     color: black;
-    text-shadow: 0px 0px 5px rgb(255, 89, 0);
+    text-shadow: 0px 0px 5px orangered;
 }
 
-#navBar li a:hover {
-    text-shadow: 1px 1px 3px rgb(255, 0, 0);
+#nav-bar li a:hover {
+    text-shadow: 1px 1px 3px red;
     font-size: 1.8rem;
     transition: 0.4s;
 }
 
-#headerTelNumber {
+#header-tel-number {
     min-width: fit-content;
 }
 
 @media (max-width: 550px) {
-    #headerTelNumber {
+    #header-tel-number {
         margin-top: 5%;
         margin-right: 80%;
     }
 }
 
-#headerTelNumber h4 {
+#header-tel-number h4 {
     font-size: 1rem;
 }
 
 @media (max-width: 550px) {
-    #headerTelNumber h4 {
+    #header-tel-number h4 {
         font-size: 0.8rem;
         transform: rotate(70deg);
     }
 }
 
 
-/* to push down main content due to header - fixed */
-#headerFiller {
+/* to push down main content due to header - position: fixed */
+#header-filler {
     width: var(--header-width);
     height: var(--header-height);
 }
