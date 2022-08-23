@@ -1,403 +1,90 @@
-@import url("style.css");
+@import 'header.css';
+@import 'footer.css';
+
+/* --------------header.css includes basic element styles------------------ */
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif, 'Times New Roman', Times;
-}
-
-body {
-    min-width: 400px;
-}
-
-h2 {
-    font-family: 'Rubik Dirt', cursive;
-    font-size: 4rem;
-    color: white;
-}
-
-h3 {
-    font-family: 'Inspiration', cursive;
-    font-size: 4rem;
-    text-shadow: 3px 3px 2px black;
-}
-
-h4 {
-    font-family: 'Gill Sans';
-    font-size: 2rem;
-}
-
-
-
-/* ---------------------Navigation bar------------------- */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: var(--header-height);
-    width: var(--header-width);
-    background: var(--header-background);
-    padding: var(--header-padding);
-    z-index: 1;
-}
-
-#PizzeriaText {
-    text-decoration: none;
-}
-
-#PizzeriaText h1 {
-    text-decoration: none;
-    font-family: 'Alumni Sans Inline One', cursive;
-    color: black;
-    font-size: 3.5rem;
-    font-weight: 300;
-    text-shadow: 1px -1px 3px rgb(255, 89, 0);
-}
-
-#PizzeriaText h1:hover {
-    text-shadow: 1px -1px 3px rgb(255, 0, 0);
-    text-shadow: 1px -1px 6px rgb(255, 0, 0);
-    transition: 0.6s;
-}
-
-#navBar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    color: brown;
-}
-
-#navBar li {
-    display: flex;
-    width: 5rem;
-    height: 2rem;
-    align-items: center;
-    margin: 0.5rem 2.5rem;
-}
-
-#navBar li a {
-    text-decoration: none;
-    font-family: 'Gill Sans';
-    font-size: 1.5rem;
-    color: black;
-    text-shadow: 0px 0px 5px rgb(255, 89, 0);
-}
-
-#navBar li a:hover {
-    text-shadow: 1px 1px 3px rgb(255, 0, 0);
-    font-size: 1.8rem;
-    transition: 0.4s;
-}
-
-#headerTelNumber {
-    min-width: fit-content;
-}
-
-@media (max-width: 550px) {
-    #headerTelNumber {
-        margin-top: 5%;
-        margin-right: 80%;
-    }
-}
-
-#headerTelNumber h4 {
-    font-size: 1rem;
-}
-
-@media (max-width: 550px) {
-    #headerTelNumber h4 {
-        font-size: 0.8rem;
-        transform: rotate(70deg);
-    }
-}
-
-
-/* to push down main content due to header - fixed */
-#headerFiller {
-    width: var(--header-width);
-    height: var(--header-height);
+:root {
+    --text-color: hsl(0, 0%, 86%);
+    --img-shadow: 5px 5px 6px black;
 }
 
 
 /* ------------------------main content---------------------- */
 
-/* ------------main 1-st section------------- */
 main {
-    background-image: url("images/background/bg-007.jpg");
+    background-image: url("/images/background/bg-007.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    color: rgb(226, 226, 226);
-    border: 5px solid orange;
-}
-
-#container-main-offer {
-    padding: 5%;
-    border: 10px solid red;
+    color: var(--text-color);
 }
 
 
-#main-offer-deal {
-    float: left;
-    width: fit-content;
-    margin-right: 4rem;
-    padding: 1rem;
-    transform: rotate(20deg);
-    border: 3px solid greenyellow;
-}
+/* ------------pizza offers------------- */
 
-@media (max-width: 700px) {
-    #main-offer-deal {
-        font-size: 3rem;
-        width: 95%;
-    }
-}
-
-#smallImg1 {
-    float: right;
-    margin: 2rem;
-    margin-right: 10%;
-    max-width: 25%;
-    min-width: 15rem;
-    border: 3px solid white;
-    transform: rotateZ(-20deg);
-}
-
-#smallImg1 img {
+#pizza-offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-}
-
-#smallImg1 h3 {
-    font-family: 'Inspiration', cursive;
-    font-size: 4rem;
-    text-align: center;
-    text-shadow: 3px 3px 2px black;
-}
-
-#mainOfferDescription {
-    width: max-content;
-    border: 3px solid greenyellow;
-}
-
-@media (max-width: 700px) {
-    #mainOfferDescription {
-        font-size: 2rem;
-        width: 95%;
-    }
-}
-
-
-/* --------------main 2-nd section-------------- */
-#favourites {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(50px, 1fr));
-    grid-template-rows: repeat(2, minmax(20px, auto));
     gap: 2rem;
-    min-width: 100%;
-    padding: 1rem;
-    margin-top: 2rem;
-    border: 3px solid rgb(237, 110, 25);
 }
 
-@media (max-width: 700px) {
-    #favourites {
-        grid-auto-flow: column;
+/* @media (max-width: 700px) {
+    #pizza-offers-container {
+        justify-content: center;
+        gap: 1rem;
     }
+} */
+
+#top-message {
+    padding: 2rem;
 }
 
-#favouriteText {
-    place-self: center;
-}
-
-@media (max-width: 700px) {
-    #favouriteText {
-        grid-column: span 2;
-        justify-self: left;
-    }
-}
-
-#favourites h2 {
-    font-size: 3rem;
-    transform: rotateZ(70deg);
-    border: 4px solid purple;
-}
-
-@media (max-width: 700px) {
-    #favourites h2 {
-        font-size: 2.4rem;
-        transform: rotateZ(10deg);
-    }
-}
-
-#favouriteOffers {
-    justify-self: left;
+.pizza {
     display: grid;
-    grid-column: span 3;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    align-items: flex-start;
     min-width: 360px;
-    max-width: 70%;
-    border: 4px solid red;
-}
-
-@media (max-width: 700px) {
-    #favouriteOffers {
-        justify-self: center;
-        grid-column: span 4;
-    }
-}
-
-#favouriteOffers>* {
-    position: relative;
-    border: 3px solid yellow;
-}
-
-#favouriteOffers img {
-
-    width: 100%;
-    height: 100%;
-    border: 3px solid green;
-}
-
-#favouriteOffers h4 {
-    position: absolute;
-    max-width: 100%;
-    max-height: 20%;
-    font-size: 1.2rem;
-    left: 5%;
-    bottom: 5%;
-    border: 3px solid blue;
-}
-
-
-/* ------------------main 3-rd section---------------- */
-#pizzeriaIntroduction {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-width: 100%;
-    min-height: 26rem;
-    gap: 2rem;
-    padding: 2rem 5%;
-    border: 4px solid gray;
-}
-
-#pizzeriaIntroduction img {
-    order: 1;
-    max-width: 450px;
-    max-height: 350px;
-    min-width: 360px;
-    border: 3px solid red;
-}
-
-
-#pizzeriaInfo {
-    flex-grow: 1;
-    width: 50%;
-    height: auto;
-    padding: 2rem;
-    background-color: black;
-    border: 4px solid cyan;
-}
-
-#pizzeriaInfo p {
-    margin-top: 1.5rem;
-}
-
-
-/* -----------------main 4-th section-------------- */
-#pizzeriaLocation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    gap: 2rem;
-    padding: 2rem;
-    border: 4px solid gray;
-}
-
-#pizzeriaLocationInfo {
-    text-align: center;
-    line-height: 4rem;
-    padding: 2rem;
-    background-color: black;
-}
-
-#pizzeriaLocation img {
-    max-width: 450px;
-    max-height: 350px;
-    min-width: 360px;
-    border: 3px solid red;
-}
-
-
-/* -----------------footer-------------- */
-
-#footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 2rem;
-    height: auto;
+    max-width: 40%;
+    /* min-height: 400px; */
     background: linear-gradient(lightgray, black);
-}
-
-#footer-nav {
-    padding-top: 1rem;
-    font-size: 1.2rem;
-}
-
-#footer-nav li {
-    list-style: none;
-}
-
-#footer-nav li a {
-    text-decoration: none;
-    color: black;
-}
-
-#footer-nav li:hover {
-    text-shadow: 0px 0px 6px orangered;
+    border: 5px solid green;
 }
 
 
-#open-hours table {
-    border-collapse: collapse;
-    border: 4px solid black;
+.pizza img {
+    max-width: 100%;
+    box-shadow: var(--img-shadow);
 }
 
-#open-hours th {
-    padding: 2px 1rem;
-    background: linear-gradient(to left, lightgray, orangered);
-    border: 2px solid black;
+.pizza h4 {
+    font-size: 2rem;
+    padding: 1rem;
 }
 
-#open-hours td {
-    padding: 2px;
-    background-color: lightgray;
-    border: 2px solid black;
+.pizza p {
+    font-size: 1rem;
+    grid-column: span 2;
+    padding: 1rem;
+    /* justify-self: center; */
 }
 
+.pizza-name-cart {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 1fr;
+    border: 3px solid yellow;
 
-#payment-info {
-    padding: 3rem;
 }
 
-#payment-text h4 {
-    font-size: 1.5rem;
-}
-
-#payment-icons {
-    scale: 2.5;
-    color: orangered;
-    margin-top: 2rem;
-    margin-left: 6rem;
-    text-shadow: 0px 0px 6px gold;
+.pizza-name-cart i {
+    justify-self: end;
+    align-self: end;
+    scale: 2;
+    padding: 1rem;
+    color: limegreen;
+    border: 3px solid blue;
 }
