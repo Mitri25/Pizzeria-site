@@ -24,23 +24,19 @@ main {
 
 /* ------------pizza offers------------- */
 
+#top-message {
+    padding: 4rem 2rem;
+    text-shadow: 0px 0px 6px black;
+}
+
+
 #pizza-offers-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    gap: 2rem;
-}
-
-/* @media (max-width: 700px) {
-    #pizza-offers-container {
-        justify-content: center;
-        gap: 1rem;
-    }
-} */
-
-#top-message {
-    padding: 2rem;
+    gap: 3rem;
+    padding-bottom: 3rem;
 }
 
 .pizza {
@@ -49,11 +45,8 @@ main {
     align-items: flex-start;
     min-width: 360px;
     max-width: 40%;
-    /* min-height: 400px; */
     background: linear-gradient(lightgray, black);
-    border: 5px solid green;
 }
-
 
 .pizza img {
     max-width: 100%;
@@ -61,30 +54,34 @@ main {
 }
 
 .pizza h4 {
+    color: black;
     font-size: 2rem;
     padding: 1rem;
+    text-shadow: 0px 0px 3px black;
 }
 
 .pizza p {
     font-size: 1rem;
-    grid-column: span 2;
     padding: 1rem;
-    /* justify-self: center; */
+    text-shadow: 0px 0px 10px black;
 }
 
 .pizza-name-cart {
     display: grid;
     height: 100%;
     grid-template-rows: 1fr 1fr;
-    border: 3px solid yellow;
+}
 
+.pizza-name-cart a {
+    position: relative;
+    justify-self: end;
+    align-self: end;
+    right: 2rem;
+    bottom: 2rem;
 }
 
 .pizza-name-cart i {
-    justify-self: end;
-    align-self: end;
     scale: 2;
     padding: 1rem;
     color: limegreen;
-    border: 3px solid blue;
 }

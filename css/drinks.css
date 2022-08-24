@@ -22,4 +22,69 @@ main {
 }
 
 
-/* ------------main 1-st section------------- */
+/* ------------drink offers------------- */
+
+/*------------------------------------------ add prices everywhere---------------------------------------- */
+/*------------------------------------------ add prices everywhere---------------------------------------- */
+
+/*------------------------------------------ add prices everywhere---------------------------------------- */
+
+/*------------------------------------------ add prices everywhere---------------------------------------- */
+
+
+#top-message {
+    padding: 4rem 2rem;
+    text-shadow: 0px 0px 6px black;
+}
+
+
+#drinks-offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.drinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    min-width: 360px;
+    max-width: 40%;
+    background: linear-gradient(lightgray, black);
+}
+
+.drinks img {
+    max-width: 100%;
+    max-height: 300px;
+    box-shadow: var(--img-shadow);
+}
+
+.drinks h4 {
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    text-shadow: 0px 0px 3px black;
+}
+
+.drinks-name-cart {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 1fr;
+}
+
+.drinks-name-cart a {
+    position: relative;
+    justify-self: end;
+    align-self: end;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.drinks-name-cart i {
+    scale: 2;
+    padding: 1rem;
+    color: limegreen;
+}

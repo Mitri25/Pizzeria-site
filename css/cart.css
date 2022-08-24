@@ -1,0 +1,25 @@
+@import 'header.css';
+@import 'footer.css';
+
+/* --------------header.css includes basic element styles------------------ */
+
+
+:root {
+    --text-color: hsl(0, 0%, 86%);
+    --img-shadow: 5px 5px 6px black;
+}
+
+
+/* ------------------------main content---------------------- */
+
+main {
+    background-image: url("/images/background/bg-007.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--text-color);
+}
+
+
+/* ------------main 1-st section------------- */

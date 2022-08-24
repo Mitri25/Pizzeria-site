@@ -22,4 +22,66 @@ main {
 }
 
 
-/* ------------main 1-st section------------- */
+/* ------------meal offers------------- */
+
+#top-message {
+    padding: 4rem 2rem;
+    text-shadow: 0px 0px 6px black;
+}
+
+
+#meals-offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+.meals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    min-width: 360px;
+    max-width: 40%;
+    background: linear-gradient(lightgray, black);
+}
+
+.meals img {
+    max-width: 100%;
+    box-shadow: var(--img-shadow);
+}
+
+.meals h4 {
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    text-shadow: 0px 0px 3px black;
+}
+
+.meals p {
+    font-size: 1rem;
+    padding: 1rem;
+    text-shadow: 0px 0px 10px black;
+}
+
+.meals-name-cart {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 1fr;
+}
+
+.meals-name-cart a {
+    position: relative;
+    justify-self: end;
+    align-self: end;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.meals-name-cart i {
+    scale: 2;
+    padding: 1rem;
+    color: limegreen;
+}
