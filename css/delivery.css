@@ -21,5 +21,24 @@ main {
     color: var(--text-color);
 }
 
+#main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
-/* ------------main 1-st section------------- */
+#main-container>* {
+    padding-left: 10%;
+    max-width: 60%;
+
+}
+
+#image-container img {
+    float: left;
+    max-width: 50%;
+    min-width: 320px;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
