@@ -16,6 +16,7 @@ h2 {
     font-size: 4rem;
 }
 
+/* decorative*/
 h3 {
     font-family: 'Inspiration', cursive;
     font-size: 4rem;
@@ -25,6 +26,12 @@ h3 {
 h4 {
     font-family: 'Gill Sans';
     font-size: 2rem;
+}
+
+/* prices */
+h5 {
+    font-size: 1.4rem;
+    text-shadow: 0px 0px 5px black;
 }
 
 :root {
@@ -99,7 +106,11 @@ h4 {
 }
 
 #header-tel-number {
+    display: flex;
+    flex-wrap: wrap;
     min-width: fit-content;
+    display: inline-block;
+    width: fit-content;
 }
 
 @media (max-width: 550px) {
@@ -118,6 +129,16 @@ h4 {
         font-size: 0.8rem;
         transform: rotate(70deg);
     }
+}
+
+#header-cart {
+    align-self: bottom;
+    padding: 1rem;
+}
+
+#header-cart i {
+    scale: 2;
+    color: hsl(120, 100%, 33%);
 }
 
 

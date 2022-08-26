@@ -44,8 +44,14 @@ main {
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
     min-width: 360px;
-    max-width: 40%;
+    max-width: 500px;
     background: linear-gradient(lightgray, black);
+}
+
+@media (max-width: 700px) {
+    .pizza {
+        max-width: 40%;
+    }
 }
 
 .pizza img {
@@ -72,16 +78,26 @@ main {
     grid-template-rows: 1fr 1fr;
 }
 
-.pizza-name-cart a {
+.price-cart {
     position: relative;
     justify-self: end;
     align-self: end;
-    right: 2rem;
-    bottom: 2rem;
+    right: 1rem;
+    bottom: 1rem;
 }
 
-.pizza-name-cart i {
-    scale: 2;
+.price-cart button {
+    scale: 0.8;
+    padding: 1rem;
+    background-color: black;
+}
+
+.price-cart button:hover {
+    cursor: pointer;
+}
+
+.price-cart i {
+    scale: 3;
     padding: 1rem;
     color: limegreen;
 }
