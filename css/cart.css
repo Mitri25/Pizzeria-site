@@ -7,6 +7,7 @@
 :root {
     --text-color: hsl(0, 0%, 86%);
     --img-shadow: 5px 5px 6px black;
+    --color-theme: orangered;
 }
 
 
@@ -22,4 +23,39 @@ main {
 }
 
 
-/* ------------main 1-st section------------- */
+/* ------------ cart ------------- */
+
+#cart-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    padding: 2rem;
+}
+
+#cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0rem;
+    background: linear-gradient(to left, lightgray, gray);
+    border: 3px solid black;
+}
+
+#cart-list li {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    /* mimax first column */
+    grid-template-rows: 50px auto;
+    /*neeed to be fixed */
+    grid-column-gap: 1rem;
+    /* min-height: 4rem; */
+    padding: 0.5rem;
+    background-color: black;
+}
+
+.remove-button {
+    max-width: 4rem;
+    max-height: 2rem;
+    background: linear-gradient(to left, lightgray, var(--color-theme));
+
+}
